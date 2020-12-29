@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualize data with a choropleth map</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1 id="title">United states educational attainment</h1>
+    <p id="description">Percentage of adults age 25 and older with a bachelor's degree or higher (2010-2014)</p>
+  </header>
+  <div class="svg-container">
+    <svg class="svg-content" viewBox="0 0 1000 650" preserveAspectRatio="none" id="legend">
+      <line x1="960" y1="40" x2="975" y2="40" style="stroke: black; stroke-width: 1" />
+      <text x="978" y="44" style="font-size: 10px;">75%</text>
+      <rect x="960" y="40" width="10" height="68" style="fill:#00441b;" />
+      <line x1="960" y1="107" x2="975" y2="107" style="stroke: black; stroke-width: 1" />
+      <text x="978" y="111" style="font-size: 10px;">66%</text>
+      <rect x="960" y="108" width="10" height="68" style="fill:#006d2c;" />
+      <line x1="960" y1="175" x2="975" y2="175" style="stroke: black; stroke-width: 1" />
+      <text x="978" y="179" style="font-size: 10px;">57%</text>
+      <rect x="960" y="176" width="10" height="68" style="fill:#238b45;" />
+      <line x1="960" y1="243" x2="975" y2="243" style="stroke: black; stroke-width: 1" />
+      <text x="978" y="247" style="font-size: 10px;">48%</text>
+      <rect x="960" y="244" width="10" height="68" style="fill:#41ab5d;" />
+      <line x1="960" y1="311" x2="975" y2="311" style="stroke: black; stroke-width: 1" />
+      <text x="978" y="315" style="font-size: 10px;">39%</text>
+      <rect x="960" y="312" width="10" height="68" style="fill:#74c476;" />
+      <line x1="960" y1="379" x2="975" y2="379" style="stroke: black; stroke-width: 1" />
+      <text x="978" y="383" style="font-size: 10px;">30%</text>
+      <rect x="960" y="380" width="10" height="68" style="fill:#a1d99b;" />
+      <line x1="960" y1="447" x2="975" y2="447" style="stroke: black; stroke-width: 1" />
+      <text x="978" y="451" style="font-size: 10px;">21%</text>
+      <rect x="960" y="448" width="10" height="68" style="fill:#c7e9c0;" />
+      <line x1="960" y1="515" x2="975" y2="515" style="stroke: black; stroke-width: 1" />
+      <text x="978" y="519" style="font-size: 10px;">12%</text>
+      <rect x="960" y="516" width="10" height="68" style="fill:#e5f5e0;" />
+      <line x1="960" y1="584" x2="975" y2="584" style="stroke: black; stroke-width: 1" />
+      <text x="978" y="588" style="font-size: 10px;">3%</text>
+      <text x="750" y="615" style="font-size: 12px;">Source: <a href="https://www.ers.usda.gov/data-products/county-level-data-sets/download-data.aspx">USDA economic research service</a></text>
+    </svg>
+  </div>
+  <footer>
+    <p>Made by <a href="https://github.com/Shaikot007" target="_blank" rel="noopener noreferrer">Shaikot</a></p>
+  </footer>
+</body>
+
+<script defer src="./script.js"></script>
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js" integrity="sha512-4UKI/XKm3xrvJ6pZS5oTRvIQGIzZFoXR71rRBb1y2N+PbwAsKa5tPl2J6WvbEvwN3TxQCm8hMzsl/pO+82iRlg==" crossorigin="anonymous"></script>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+</html>
