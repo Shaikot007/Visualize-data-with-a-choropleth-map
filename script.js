@@ -57,8 +57,8 @@ function drawMap() {
       const maxPercentage = d3.max(education_data, data => data["bachelorsOrHigher"]);
       const minPercentage = d3.min(education_data, data => data["bachelorsOrHigher"]);
       const color = d3.scaleThreshold()
-                    .domain(d3.range(minPercentage, maxPercentage, (maxPercentage - minPercentage) / 8))
-                    .range(d3.schemeGreens[9]);
+                      .domain(d3.range(minPercentage, maxPercentage, (maxPercentage - minPercentage) / 8))
+                      .range(d3.schemeGreens[9]);
       
       return color(county["bachelorsOrHigher"]);
     })
