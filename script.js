@@ -59,7 +59,7 @@ function drawMap() {
       const color = d3.scaleThreshold()
                       .domain(d3.range(minPercentage, maxPercentage, (maxPercentage - minPercentage) / 8))
                       .range(d3.schemeGreens[9]);
-      
+
       return color(county["bachelorsOrHigher"]);
     })
     .attr("data-fips", data => {
@@ -77,12 +77,12 @@ function drawMap() {
              .style("opacity", 1)
              .style("left", data.pageX + "px")
              .style("top", data.pageY + "px");
-      
+
         const fips = index["id"];
         const county = education_data.find(county => {
           return county["fips"] === fips;
-        }); 
-      
+        });
+
       document.querySelector("#tooltip").setAttribute("data-education", county["bachelorsOrHigher"]);
       document.querySelector("#tooltip").innerHTML = county["area_name"] + ", " + county["state"] + ": " + county["bachelorsOrHigher"] + "%";
    })
